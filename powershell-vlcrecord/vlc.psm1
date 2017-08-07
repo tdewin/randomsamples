@@ -20,7 +20,7 @@ function Start-VLCRecording {
             $vlcpath = $v32
         } else {
             try { 
-                $vlcpath = "{0}\vlc.exe" -f (Get-ItemPropertyValue -path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\VLC media player" -name "InstallLocationd"  -ErrorAction SilentlyContinue) }
+                $vlcpath = "{0}\vlc.exe" -f (Get-ItemPropertyValue -path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\VLC media player" -name "InstallLocation"  -ErrorAction SilentlyContinue)
             catch {
             }
         }
