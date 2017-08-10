@@ -28,4 +28,4 @@ foreach ($line in $ptab) {
 $ps.Save("sample.html")
 ```
 
-[See Sample](./sample.html)
+[Download Sample](https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtm/sample.html)
