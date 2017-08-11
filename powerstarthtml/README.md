@@ -73,4 +73,6 @@ $ps.Save("sample.html")
 [Download Sample](https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/sample.html)
 
 # Installing
-iex $(wget 'https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/PowerStartHTML/bootstrap.ps1').content
+```powershell
+iex $(wget 'https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/bootstrap.ps1').content
+`` 
