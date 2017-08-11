@@ -140,9 +140,14 @@ class PowerStartHTMLPassThroughElement {
 }
 function New-PowerStartHTML {
 	param(
-		[Parameter(Mandatory=$true)][string]$title
+		[Parameter(Mandatory=$true)][string]$title,
+        [switch]$nobootstrap=$false
 	)
-    return (new-object PowerStartHTML($title))
+    $pshtml = (new-object PowerStartHTML($title))
+    if(-not $nobootstrap) {
+        $pshtml.AddBootStrap().AddContainerAttrToMain().N()
+    }
+    return $pshtml
 }
 function Add-PowerStartHTMLTable {
     param(

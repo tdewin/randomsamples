@@ -4,10 +4,10 @@ Combining bootstrap with powershell (cause out-html looks ugly anyway)
 The PowerStartHTML class will remember the last add element, so you can just keep Adding and adding. 
 
 
-```
+```powershell
 Add(type,class,text)
 Append(type,class,text)
-````
+```
 The difference between Add is that it will remember the new element as the as the element. With Append, it remember the parent, so you can add an element at the same depth
 
 * If you want to split but don't want to return the document, end your command with .N() (basically does nothing)
@@ -21,11 +21,9 @@ The difference between Add is that it will remember the new element as the as th
 Here is some sample code which is pretty advanced since it will create tooltips etc.
 
 ```powershell
-get-module powerstarthtml | remove-module
 import-module PowerStartHTML
 $ps = New-PowerStartHTML -title "Hello PowerStartHTML!"
 #$ps.indentedOutput = $true
-$ps.AddBootStrap().AddContainerAttrToMain().N()
 $ps.Main().Add("div","jumbotron jumbotron-fluid").Add("div","container").N()
 $ps.Append("h1",$null,"Hello PowerStartHTML").Append("hr","my-4").Append("p",$null,"Cause Out-HTML is so 1984").N()
 get-volume | select DriveLetter,HealthStatus,OperationalStatus,SizeRemaining,Size | Add-PowerStartHTMLTable -psHtml $ps -tableTitle "Volumes" -tableClass "table table-striped"
