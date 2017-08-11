@@ -72,4 +72,4 @@ $ps.Save("sample.html")
 ![Sample](./sample.png)
 
 
-[Download Sample](https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtm/sample.html)
+[Download Sample](https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/sample.html)
