@@ -75,4 +75,4 @@ $ps.Save("sample.html")
 # Installing
 ```powershell
 iex $(wget 'https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/bootstrap.ps1').content
-`` 
+```
