@@ -68,8 +68,9 @@ $ps.onLoadJS.Add(' $(''[data-toggle="tooltip"]'').tooltip()');
 $ps.Save("sample.html")
 ```
 
-
 ![Sample](./sample.png)
 
-
 [Download Sample](https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/sample.html)
+
+# Installing
+iex $(wget 'https://raw.githubusercontent.com/tdewin/randomsamples/master/powerstarthtml/PowerStartHTML/bootstrap.ps1').content
