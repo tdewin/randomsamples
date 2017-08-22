@@ -27,3 +27,8 @@ Connect-VBRServer -server $server -Credential  $credentials
 $stats = Get-VeeamAllStat
 $stats
 ```
+
+
+# Screenshots
+![Installing](./media/installing.png)
+![Result](./media/result.png)
