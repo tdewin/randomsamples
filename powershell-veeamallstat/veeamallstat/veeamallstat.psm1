@@ -405,12 +405,12 @@ function New-VeeamAllStatReport {
            
             $ps.Add("table","table bgcolorsub").N()
 
-            $ps.Add("tr").Append("td",$null,"Start Time").Append("td",$null,(Get-HumanDate $s.creationTime)).N()
-                $ps.Append("td",$null,"VM Success").Append("td",$null,($s.vmssuccess)).Up().N()
-            $ps.Add("tr").Append("td",$null,"End Time").Append("td",$null,(Get-HumanDate $s.endTime)).N()
-                $ps.Append("td",$null,"VM Warning").Append("td",$null,($s.vmswarning)).Up().N()
-            $ps.Add("tr").Append("td",$null,"Duration").Append("td",$null,(Get-HumanDuration $s.duration)).N()
-                $ps.Append("td",$null,"VM Error").Append("td",$null,($s.vmserror)).Up().N()   
+            $ps.Add("tr").Append("td","font-weight-bold","Start Time").Append("td",$null,(Get-HumanDate $s.creationTime)).N()
+                $ps.Append("td","font-weight-bold","VM Success").Append("td",$null,($s.vmssuccess)).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","End Time").Append("td",$null,(Get-HumanDate $s.endTime)).N()
+                $ps.Append("td","font-weight-bold","VM Warning").Append("td",$null,($s.vmswarning)).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","Duration").Append("td",$null,(Get-HumanDuration $s.duration)).N()
+                $ps.Append("td","font-weight-bold","VM Error").Append("td",$null,($s.vmserror)).Up().N()   
 
             if($s.details -ne "") {
                 $ps.Add("tr").Append("td","alert-danger","Errors : {0}" -f $s.details).AddAttrs($ps.newEl,@{"colspan"=4})
@@ -419,14 +419,14 @@ function New-VeeamAllStatReport {
 
 
             $ps.Up().Add("table","table bgcolorsub").N()
-            $ps.Add("tr").Append("td",$null,"Total Size").Append("td",$null,(Get-HumanDataSize $s.totalSize)).N()
-                $ps.Append("td",$null,"Total Objects").Append("td",$null,$s.totalObjects).Up().N()
-            $ps.Add("tr").Append("td",$null,"Read Size").Append("td",$null,(Get-HumanDataSize $s.dataRead)).N()
-                $ps.Append("td",$null,"Processed Objects").Append("td",$null,$s.processedObjects).Up().N()
-            $ps.Add("tr").Append("td",$null,"Transferred Size").Append("td",$null,(Get-HumanDataSize $s.transferredSize)).N()
-                $ps.Append("td",$null,"Compression").Append("td",$null,('{0}x' -f $s.Compression)).Up().N()
-            $ps.Add("tr").Append("td",$null,"Target Size").Append("td",$null,(Get-HumanDataSize $s.backupSize)).N()
-                $ps.Append("td",$null,"Dedupe").Append("td",$null,('{0}x' -f $s.Dedupe)).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","Total Size").Append("td",$null,(Get-HumanDataSize $s.totalSize)).N()
+                $ps.Append("td","font-weight-bold","Total Objects").Append("td",$null,$s.totalObjects).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","Read Size").Append("td",$null,(Get-HumanDataSize $s.dataRead)).N()
+                $ps.Append("td","font-weight-bold","Processed Objects").Append("td",$null,$s.processedObjects).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","Transferred Size").Append("td",$null,(Get-HumanDataSize $s.transferredSize)).N()
+                $ps.Append("td","font-weight-bold","Compression").Append("td",$null,('{0}x' -f $s.Compression)).Up().N()
+            $ps.Add("tr").Append("td","font-weight-bold","Target Size").Append("td",$null,(Get-HumanDataSize $s.backupSize)).N()
+                $ps.Append("td","font-weight-bold","Dedupe").Append("td",$null,('{0}x' -f $s.Dedupe)).Up().N()
 
 
             $ps.Up().Add("table","table bgcolorsub").N()
